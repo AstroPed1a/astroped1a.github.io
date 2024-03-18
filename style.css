@@ -6,13 +6,12 @@ body {
 h1 {
   font-family: 'Noto Sans Mono','monospace';
   font-size: 130px;
-  color: #ffffff;
+  color: white;
 }
-
 container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
   width: 100vw;
   height: 100vh;
 }
@@ -22,19 +21,21 @@ menu-toggle {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
+  margin-bottom: 1rem; /* Add some space between button and content */
 }
 
 menu {
-  position: absolute;
+  position: fixed; /* Fix the menu to the viewport */
   top: 0;
   left: -100%; /* Hide the menu initially */
   width: 100vw;
   height: 100vh;
   background-color: #fff;
   transition: left 0.3s ease-in-out;
+  overflow-y: auto; /* Enable scrolling for long menus */
 }
 
-menu.open { /* Apply styling when the menu is open */
+menu.open {
   left: 0;
 }
 
@@ -42,10 +43,9 @@ menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: center;
 }
 
-.menu li {
+menu li {
   margin: 1rem 0;
 }
 
@@ -53,5 +53,23 @@ menu a {
   text-decoration: none;
   color: #000;
   font-size: 1rem;
+  display: block; /* Make menu items fill width */
+  padding: 0.5rem 1rem; /* Add padding for better click target */
 }
 
+dropdown {
+  position: relative; /* Needed for dropdown positioning */
+}
+
+dropdown-content {
+  position: absolute; /* Make dropdown content absolute */
+  top: 100%; /* Position below the main menu item */
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Add slight shadow */
+  display: none; /* Hide initially */
+}
+
+dropdown:hover .dropdown-content {
+  display: block; /* Show dropdown on hover */
+}
