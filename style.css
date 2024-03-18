@@ -8,6 +8,9 @@ h1 {
   font-size: 130px;
   color: white;
 }
+p {
+  color: black;
+}
 container {
   display: flex;
   flex-direction: column;
