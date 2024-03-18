@@ -1,5 +1,10 @@
 body {
-  background-image: url('images/blackhole1.png');
+  background-image: url('images/blackhole3.png');
   background-size: cover;
   background-position: center;
+}
+h1 {
+  font: 'Noto Sans Mono';
+  font-size: 48px;
+  font-color: white;
 }
