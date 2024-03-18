@@ -1,7 +1,4 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.menu');
-
-menuToggle.addEventListener('click', () => {
-  menu.classList.toggle('open');
-});
-
+function toggleDropdown() {
+  let dropdown = document.getElementById("myDropdown");
+  dropdown.classList.toggle("active");
+}
