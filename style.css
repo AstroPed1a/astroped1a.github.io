@@ -33,10 +33,14 @@ menu {
   background-color: #fff;
   transition: left 0.3s ease-in-out;
   overflow-y: auto; /* Enable scrolling for long menus */
+  /* Add a transform to tuck in the menu slightly */
+  transform: translateX(-20px);
 }
 
 menu.open {
   left: 0;
+  /* Remove transform when menu is open */
+  transform: translateX(0);
 }
 
 menu ul {
