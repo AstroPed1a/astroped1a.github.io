@@ -6,7 +6,7 @@ body {
 h1 {
   font-family: 'Noto Sans Mono','monospace';
   font-size: 48px;
-  font-color: white;
+  color: #ffffff;
 }
 
 container {
